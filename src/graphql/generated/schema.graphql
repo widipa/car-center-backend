@@ -1,0 +1,120 @@
+type Query {
+  clientes: [Cliente]
+}
+
+"""Clientes de Car Center"""
+type Cliente {
+  """id del cliente"""
+  id: ID!
+
+  """Primer nombre del cliente"""
+  primer_nombre: String
+
+  """Segundo nombre del cliente"""
+  segundo_nombre: String
+
+  """Primer apellido del cliente"""
+  primer_apellido: String
+
+  """Segundo apellido del cliente"""
+  segundo_apellido: String
+
+  """Tipo de documento del cliente"""
+  tipo_documento: String
+
+  """Número de identificación del cliente"""
+  documento: String
+
+  """Número de celular del cliente"""
+  celular: String
+
+  """Dirección de ubicación del cliente"""
+  direccion: String
+
+  """Correo electrónico válido del cliente"""
+  correo_electronico: String
+}
+
+type Mutation {
+  createCliente(
+    """Cliente ingresado para ser creado."""
+    input: CreateClienteInput!
+  ): Cliente
+  updateCliente(
+    """Cliente ingresado para ser actualizado."""
+    input: UpdateClienteInput!
+  ): Cliente
+  deleteCliente(
+    """Cliente ingresado para ser eliminado."""
+    input: DeleteClienteInput!
+  ): Cliente
+}
+
+"""Crear un registros de cliente"""
+input CreateClienteInput {
+  """Primer nombre del cliente"""
+  primer_nombre: String!
+
+  """Segundo nombre del cliente"""
+  segundo_nombre: String!
+
+  """Primer apellido del cliente"""
+  primer_apellido: String!
+
+  """Segundo apellido del cliente"""
+  segundo_apellido: String!
+
+  """Tipo de documento del cliente"""
+  tipo_documento: String!
+
+  """Número de identificación del cliente"""
+  documento: String!
+
+  """Número de celular del cliente"""
+  celular: String!
+
+  """Dirección de ubicación del cliente"""
+  direccion: String!
+
+  """Correo electrónico válido del cliente"""
+  correo_electronico: String!
+}
+
+"""Actualizar un registro de cliente"""
+input UpdateClienteInput {
+  """id del cliente"""
+  id: ID!
+
+  """Primer nombre del cliente"""
+  primer_nombre: String
+
+  """Segundo nombre del cliente"""
+  segundo_nombre: String
+
+  """Primer apellido del cliente"""
+  primer_apellido: String
+
+  """Segundo apellido del cliente"""
+  segundo_apellido: String
+
+  """Tipo de documento del cliente"""
+  tipo_documento: String
+
+  """Número de identificación del cliente"""
+  documento: String
+
+  """Número de celular del cliente"""
+  celular: String
+
+  """Dirección de ubicación del cliente"""
+  direccion: String
+
+  """Correo electrónico válido del cliente"""
+  correo_electronico: String
+}
+
+"""Eliminar un registro de cliente"""
+input DeleteClienteInput {
+  """id del cliente"""
+  id: ID!
+}
